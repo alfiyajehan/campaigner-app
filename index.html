@@ -1,113 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Campaigner</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <div
+      class="mainSection relative w-full h-screen bg-zinc-50 font-[means-web]"
+    >
+      <div class="nav p-6 flex justify-between">
+        <div class="logo">
+          <h2
+            class="text-[4vw] lg:text-[2vw] font-bold tracking-tighter leading-normal"
+          >
+            Campaigner
+          </h2>
+        </div>
+        <div class="nav-right flex gap-2">
+          <button
+            class="px-4 py-1 text-[3vw] lg:text-[1vw] lg:px-6 lg:py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-500 transition-all ease-linear cursor-pointer"
+          >
+            Login
+          </button>
+          <button
+            class="px-4 py-1 text-[3vw] lg:text-[1vw] lg:px-6 lg:py-2 rounded-full text-white bg-zinc-700 hover:bg-zinc-600 transition-all ease-linear cursor-pointer"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
 
-</head>
-<body>
-    <div class="mainSection relative w-full h-screen bg-zinc-50 font-[means-web]">
-        <div class="nav p-6 flex justify-between">
-            <div class="logo">
-                <h2 class="text-[4vw] lg:text-[2vw] font-bold tracking-tighter leading-normal">Campaigner</h2>
-            </div>
-            <div class="nav-right flex gap-2">
-                <button class="px-4 py-1 text-[3vw] lg:text-[1vw] lg:px-6 lg:py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-500 transition-all ease-linear cursor-pointer">Login</button>
-                <button class="px-4 py-1 text-[3vw] lg:text-[1vw] lg:px-6 lg:py-2 rounded-full text-white bg-zinc-700 hover:bg-zinc-600 transition-all ease-linear cursor-pointer">Sign Up</button>
-            </div>
+      <div class="w-full flex flex-col items-center justify-center gap-5 py-10">
+        <h1
+          class="text-[7vw] lg:text-6xl text-zinc-700 font-bold tracking-tight leading-normal"
+        >
+          Campaign with Emails
+        </h1>
+        <p
+          class="text-center text-[3vw] px-10 lg:px-0 lg:text-xl text-zinc-500"
+        >
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum hic
+          Lorem ipsum dolor sit amet. <br />
+          ea porro quis, harum quae tenetur blanditiis sed ipsum eius!
+        </p>
+        <button
+          class="px-4 py-2 lg:px-6 lg:py-2 rounded-full bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition-all ease-linear cursor-pointer text-[3.5vw] lg:text-lg"
+        >
+          Get Started
+        </button>
+      </div>
+
+      <div
+        class="absolute top-[57%] w-full p-2 lg:h-1/2 flex flex-col lg:flex-row gap-3"
+      >
+        <div
+          class="w-full lg:w-1/4 h-[35vh] lg:h-[100%] bg-[#E6B95F] flex flex-col rounded-md"
+        >
+          <div class="h-4/5 relative">
+            <h3
+              class="relative text-center top-[1em] z-50 font-bold text-[4.5vw] lg:text-[1.4vw] hover:underline cursor-pointer"
+            >
+              Drive Conversions with Email
+            </h3>
+            <img
+              src="assets/images/gmail.png"
+              alt="gmail"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] lg:w-[50%] mt-4"
+            />
+          </div>
+          <div class="h-1/5 flex justify-center items-center">
+            <button
+              class="createCampaign px-4 py-3 lg:px-6 lg:py-4 text-[3vw] lg:text-[1vw] bg-zinc-700 text-white rounded-full hover:bg-white hover:text-zinc-800 transition-all ease-linear hover:font-bold mb-10 cursor-pointer"
+            >
+              Create Campaign
+            </button>
+          </div>
         </div>
 
-        <div class="w-full flex flex-col items-center justify-center gap-5 py-10">
-            <h1 class="text-[7vw] lg:text-6xl text-zinc-700 font-bold tracking-tight leading-normal">Campaign with Emails</h1>
-            <p class="text-center text-[3vw] px-10 lg:px-0 lg:text-xl text-zinc-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum hic Lorem ipsum dolor sit amet. <br> ea porro quis, harum quae tenetur blanditiis sed ipsum eius!</p>
-            <button class="px-4 py-2 lg:px-6 lg:py-2 rounded-full bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition-all ease-linear cursor-pointer text-[3.5vw] lg:text-lg">Get Started</button>
+        <div
+          class="w-full lg:w-1/4 h-[35vh] lg:h-[100%] bg-[#EBE1CD] flex flex-col rounded-md"
+        >
+          <div class="h-4/5 relative">
+            <h3
+              class="relative text-center top-[1em] z-50 font-bold text-[4.5vw] lg:text-[1.4vw] hover:underline cursor-pointer"
+            >
+              Connect Directly on WhatsApp
+            </h3>
+            <img
+              src="assets/images/whatsapp.png"
+              alt="gmail"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] lg:w-[50%] mt-4"
+            />
+          </div>
+          <div class="h-1/5 flex justify-center items-center">
+            <button
+              class="createCampaign px-4 py-3 lg:px-6 lg:py-4 text-[3vw] lg:text-[1vw] bg-zinc-700 text-white rounded-full hover:bg-white hover:text-zinc-800 transition-all ease-linear hover:font-bold mb-10 cursor-pointer"
+            >
+              Create Campaign
+            </button>
+          </div>
         </div>
 
-        <div class="absolute top-[57%] w-full p-2 lg:h-1/2 flex flex-col lg:flex-row gap-3">
-            <div class="w-full lg:w-1/4 h-[35vh] lg:h-[100%] bg-[#E6B95F] flex flex-col rounded-md">
-                <div class="h-4/5 relative">
-                    <h3 class=" relative text-center top-[1em] z-50 font-bold text-[4.5vw] lg:text-[1.4vw] hover:underline cursor-pointer">Drive Conversions with Email</h3>
-                    <img src="assets/images/gmail.png" alt="gmail" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] lg:w-[50%] mt-4">
-                </div>  
-                <div class="h-1/5 flex justify-center items-center">
-                    <button class="createCampaign px-4 py-3 lg:px-6 lg:py-4 text-[3vw] lg:text-[1vw] bg-zinc-700 text-white rounded-full hover:bg-white hover:text-zinc-800 transition-all ease-linear hover:font-bold mb-10 cursor-pointer">Create Campaign</button>
-                </div>
-            </div>
-
-            <div class="w-full lg:w-1/4 h-[35vh] lg:h-[100%] bg-[#EBE1CD] flex flex-col rounded-md">
-                <div class="h-4/5 relative">
-                     <h3 class=" relative text-center top-[1em] z-50 font-bold text-[4.5vw] lg:text-[1.4vw] hover:underline cursor-pointer">Connect Directly on WhatsApp</h3>
-                    <img src="assets/images/whatsapp.png" alt="gmail" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] lg:w-[50%] mt-4">
-                </div>
-                <div class="h-1/5 flex justify-center items-center">
-                    <button class="createCampaign px-4 py-3 lg:px-6 lg:py-4 text-[3vw] lg:text-[1vw] bg-zinc-700 text-white rounded-full hover:bg-white hover:text-zinc-800 transition-all ease-linear hover:font-bold mb-10 cursor-pointer">Create Campaign</button>
-                </div>
-            </div>
-
-            <div class="w-full lg:w-1/4 h-[35vh] lg:h-[100%] bg-[#E6B95F] flex flex-col rounded-md">
-                <div class="h-4/5 relative">
-                    <h3 class=" relative text-center top-[1em] z-50 font-bold text-[4.5vw] lg:text-[1.4vw] hover:underline cursor-pointer">Turn Followers into Customers</h3>
-                    <img src="assets/images/instagram.png" alt="gmail" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] lg:w-[50%] mt-4">
-                </div>
-                <div class="h-1/5 flex justify-center items-center">
-                    <button class="createCampaign px-4 py-3 lg:px-6 lg:py-4 text-[3vw] lg:text-[1vw] bg-zinc-700 text-white rounded-full hover:bg-white hover:text-zinc-800 transition-all ease-linear hover:font-bold mb-10 cursor-pointer">Create Campaign</button>
-                </div>
-            </div>
-
-            <div class="w-full lg:w-1/4 h-[35vh] lg:h-[100%] bg-[#EBE1CD] flex flex-col rounded-md">
-                <div class="h-4/5 relative">
-                    <h3 class=" relative text-center top-[1em] z-50 font-bold text-[4.5vw] lg:text-[1.4vw] hover:underline cursor-pointer">Amplify Reach with Facebook Ads</h3>
-                    <img src="assets/images/facebook.png" alt="gmail" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] lg:w-[50%] mt-4">
-                </div>
-                <div class="h-1/5 flex justify-center items-center">
-                    <button class="createCampaign px-4 py-3 lg:px-6 lg:py-4 text-[3vw] lg:text-[1vw] bg-zinc-700 text-white rounded-full hover:bg-white hover:text-zinc-800 transition-all ease-linear hover:font-bold mb-10 cursor-pointer">Create Campaign</button>
-                </div>
-            </div>
-
+        <div
+          class="w-full lg:w-1/4 h-[35vh] lg:h-[100%] bg-[#E6B95F] flex flex-col rounded-md"
+        >
+          <div class="h-4/5 relative">
+            <h3
+              class="relative text-center top-[1em] z-50 font-bold text-[4.5vw] lg:text-[1.4vw] hover:underline cursor-pointer"
+            >
+              Turn Followers into Customers
+            </h3>
+            <img
+              src="assets/images/instagram.png"
+              alt="gmail"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] lg:w-[50%] mt-4"
+            />
+          </div>
+          <div class="h-1/5 flex justify-center items-center">
+            <button
+              class="createCampaign px-4 py-3 lg:px-6 lg:py-4 text-[3vw] lg:text-[1vw] bg-zinc-700 text-white rounded-full hover:bg-white hover:text-zinc-800 transition-all ease-linear hover:font-bold mb-10 cursor-pointer"
+            >
+              Create Campaign
+            </button>
+          </div>
         </div>
+
+        <div
+          class="w-full lg:w-1/4 h-[35vh] lg:h-[100%] bg-[#EBE1CD] flex flex-col rounded-md"
+        >
+          <div class="h-4/5 relative">
+            <h3
+              class="relative text-center top-[1em] z-50 font-bold text-[4.5vw] lg:text-[1.4vw] hover:underline cursor-pointer"
+            >
+              Amplify Reach with Facebook Ads
+            </h3>
+            <img
+              src="assets/images/facebook.png"
+              alt="gmail"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] lg:w-[50%] mt-4"
+            />
+          </div>
+          <div class="h-1/5 flex justify-center items-center">
+            <button
+              class="createCampaign px-4 py-3 lg:px-6 lg:py-4 text-[3vw] lg:text-[1vw] bg-zinc-700 text-white rounded-full hover:bg-white hover:text-zinc-800 transition-all ease-linear hover:font-bold mb-10 cursor-pointer"
+            >
+              Create Campaign
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-        <div id="uploadSection" class=" hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#fafafa]">
-        <div id="errorM" class="hidden text-black p-1 z-50 text-red-500 bg-red-100 rounded-[4px] text-center m-2"></div>
-        <div class="w-[40em] h-[15em] bg-white border-2 border-solid border-gray-300 rounded-lg flex justify-center items-center p-4">
-            <div class="w-[100%] h-[100%] bg-blue-50 border-2 border-dashed border-gray-300 flex flex-col justify-center items-center">
-            <div>
-                <img src="assets/images/csv.png" alt="csvIcon" class="w-12 h-12" />
-            </div>
-            <div class="text-lg font-semibold m-2">
-                Upload CSV file here
-            </div>
+    <div
+      id="uploadSection"
+      class="hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#fafafa]"
+    >
+      <div
+        id="errorM"
+        class="hidden text-black p-1 z-50 bg-red-100 rounded-[4px] text-center m-2"
+      ></div>
+      <div
+        class="w-[40em] h-[15em] bg-white border-2 border-solid border-gray-300 rounded-lg flex justify-center items-center p-4"
+      >
+        <div
+          class="w-[100%] h-[100%] bg-blue-50 border-2 border-dashed border-gray-300 flex flex-col justify-center items-center"
+        >
+          <div>
+            <img src="assets/images/csv.png" alt="csvIcon" class="w-12 h-12" />
+          </div>
+          <div class="text-lg font-semibold m-2">Upload CSV file here</div>
 
-            <div>
+          <div id="drop-area">
             <form method="post">
-                <label for="fileUpload" class="cursor-pointer  bg-yellow-400 text-black font-semibold px-6 py-2 rounded-md flex items-center gap-2  hover:bg-yellow-500 border-2 border-black transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
-                    viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 4v16m8-8H4" />
-                    </svg>
-                    Upload
-                </label>
-                <input type="file" id="fileUpload" name="fileUpload" required class="hidden">
+              <label
+                for="fileUpload"
+                class="cursor-pointer bg-yellow-400 text-black font-semibold px-6 py-2 rounded-md flex items-center gap-2 hover:bg-yellow-500 border-2 border-black transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 4v16m8-8H4"
+                  />
+                </svg>
+                Upload
+              </label>
+              <input
+                type="file"
+                id="fileUpload"
+                name="fileUpload"
+                required
+                class="hidden"
+              />
             </form>
-            </div>
-
+          </div>
         </div>
-
-        </div>  
+      </div>
     </div>
-<div id="csvTableContainer" class="hidden absolute mt-8 px-4 w-full max-w-full overflow-x-hidden bg-[#fafafa]">
-    <div class="w-full bg-[#dadada]"></div>
-</div>
+    <div
+      id="csvTableContainer"
+      class="hidden absolute mt-8 px-4 w-full max-w-full overflow-x-hidden bg-[#fafafa]"
+    >
+      <div class="w-full bg-[#dadada]"></div>
+    </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
